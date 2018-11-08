@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\Device\Entities\**" />
+    <Compile Remove="Model\Device\Specifications\**" />
+    <Compile Remove="Model\Device\ValueObjects\**" />
+    <EmbeddedResource Remove="Model\Device\Entities\**" />
+    <EmbeddedResource Remove="Model\Device\Specifications\**" />
+    <EmbeddedResource Remove="Model\Device\ValueObjects\**" />
+    <None Remove="Model\Device\Entities\**" />
+    <None Remove="Model\Device\Specifications\**" />
+    <None Remove="Model\Device\ValueObjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Akka.Persistence.EventStore" Version="1.3.0" />
+    <PackageReference Include="Akka.Persistence.EventStore.Query" Version="1.3.0" />
+    <PackageReference Include="Akkatecture" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>
